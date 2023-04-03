@@ -27,7 +27,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun isNot29SDK() {
-        if(Build.VERSION.SDK_INT == 29) {
+        if(Build.VERSION.SDK_INT != 29) {
             Assert.fail()
         }
     }
