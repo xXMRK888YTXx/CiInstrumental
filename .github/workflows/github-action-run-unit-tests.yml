@@ -22,13 +22,14 @@ jobs:
         with:
             sdk-version: 31
 
-      - name: Setup Android emulator
-        uses: android/setup-emulator@v1
+      - name: Create Android Emulator
+        uses: reactivecircus/android-emulator-runner@v2.2.1
         with:
             api-level: 30
-            emulator-version: '30.3.5'
+            target: default
+            tag: google_apis
+            arch: x86
             profile: Nexus 5X
-            timezone: 'America/Los_Angeles'
 
       - name: Run unit tests
         run: ./gradlew connectedAndroidTest
