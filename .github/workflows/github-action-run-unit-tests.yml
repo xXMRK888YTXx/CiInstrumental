@@ -1,0 +1,26 @@
+name: Run unit tests
+on: [pull_request_target]
+jobs:
+  run-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          ref: Develop
+
+      - name: Change wrapper permissions
+        run: chmod +x gradlew
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+            java-version: '12.x'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+        with:
+            sdk-version: 31
+
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest
