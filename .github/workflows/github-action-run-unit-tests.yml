@@ -12,24 +12,8 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x gradlew
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-            java-version: '12.x'
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
-        with:
-            sdk-version: 31
-
-      - name: Create Android Emulator
+      - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-            api-level: 30
-            target: default
-            tag: google_apis
-            arch: x86
-            profile: Nexus 5X
-
-      - name: Run unit tests
-        run: ./gradlew connectedAndroidTest
+          api-level: 29
+          script: ./gradlew connectedCheck
