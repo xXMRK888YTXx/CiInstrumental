@@ -18,6 +18,6 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.xxmrk888ytxx.ciinstrumental", appContext.packageName)
+        assertEquals("com.xxmrk888ytxx.failed", appContext.packageName)
     }
 }
