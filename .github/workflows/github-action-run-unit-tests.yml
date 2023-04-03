@@ -23,4 +23,4 @@ jobs:
             sdk-version: 31
 
       - name: Run unit tests
-        run: ./gradlew testDebugUnitTest
+        run: ./gradlew connectedAndroidTest
