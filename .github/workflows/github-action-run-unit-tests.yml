@@ -12,6 +12,16 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x gradlew
 
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+            java-version: '12.x'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+        with:
+            sdk-version: 31
+
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2.28.0
         with:
