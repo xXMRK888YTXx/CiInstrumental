@@ -28,7 +28,7 @@ jobs:
             api-level: 30
             emulator-version: '30.3.5'
             profile: Nexus 5X
-            timezone: 'America/Los_Angeles
+            timezone: 'America/Los_Angeles'
 
       - name: Run unit tests
         run: ./gradlew connectedAndroidTest
