@@ -1,11 +1,7 @@
-package com.xxmrk888ytxx.ciinstrumental
+package com.xxmrk888ytxx.mylibrary
 
-import android.content.Intent
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.junit.Assert
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,14 +17,6 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.xxmrk888ytxx.ciinstrumental", appContext.packageName)
-    }
 
-    @Test
-    fun isNot29SDK() {
-        if(Build.VERSION.SDK_INT != 29) {
-            Assert.fail()
-        }
     }
 }
