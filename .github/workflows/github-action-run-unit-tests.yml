@@ -23,7 +23,7 @@ jobs:
             sdk-version: 31
 
       - name: Create Android Emulator
-        uses: reactivecircus/android-emulator-runner@v2.2.1
+        uses: reactivecircus/android-emulator-runner@v2
         with:
             api-level: 30
             target: default
